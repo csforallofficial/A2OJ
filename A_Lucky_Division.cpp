@@ -43,29 +43,18 @@ int main()
 {
     int n;
     cin >> n;
-    int ans = n, rem = 0;
+    int arr[10] = {4, 7, 47, 74, 444, 447, 474, 777, 774, 747};
     bool flag = false;
-    while (ans)
+    for (int i = 0; i < 10; i++)
     {
-        if (ans % 10 == 7 || ans % 10 == 4)
+        if (n % arr[i] == 0)
         {
-            ans /= 10;
             flag = true;
-        }
-        else
-        {
-            flag = false;
+            cout << "YES" << endl;
             break;
         }
     }
-    if (flag == true)
-        cout << "YES" << endl;
-    else
-    {
-        if (n % 4 == 0 || n % 7 == 0)
-            cout << "YES" << endl;
-        else
-            cout << "NO" << endl;
-    }
+    if (flag == false)
+        cout << "NO" << endl;
     return 0;
 }
