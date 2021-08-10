@@ -43,18 +43,9 @@ int main()
 {
     int n;
     cin >> n;
-    int arr[10] = {4, 7, 47, 74, 444, 447, 474, 777, 774, 747};
-    bool flag = false;
-    for (int i = 0; i < 10; i++)
-    {
-        if (n % arr[i] == 0)
-        {
-            flag = true;
-            cout << "YES" << endl;
-            break;
-        }
-    }
-    if (flag == false)
+    if (n % 4 == 0 || n % 7 == 0 || n % 47 == 0 || n % 74 == 0 || n % 444 == 0 || n % 447 == 0 || n % 474 == 0 || n % 477 == 0 || n % 777 == 0 || n % 774 == 0 || n % 747 == 0 || n % 744 == 0)
+        cout << "YES" << endl;
+    else
         cout << "NO" << endl;
     return 0;
 }
